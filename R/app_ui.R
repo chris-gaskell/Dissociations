@@ -6,11 +6,32 @@
 #' @noRd
 app_ui <- function(request) {
   tagList(
-    # Leave this function for adding external resources
     golem_add_external_resources(),
-    # Your application UI logic
     fluidPage(
-      h1("FirstGolem")
+      theme = bslib::bs_theme(
+        version = 5,
+        bootswatch = "flatly", #primary = "darkgreen"
+      ),
+      tags$head(
+        tags$style(
+          HTML(".horizontal-inputs .form-group { display: inline-block; margin-right: 10px; }")
+        )
+      ),
+
+      h1("FirstGolem"),
+
+      fluidRow(
+      tabsetPanel(
+        tabPanel(
+          "Deficits",
+          mod_deficit_ui("deficit_1")
+        ),
+        tabPanel(
+          "Discrepancies",
+          mod_discrepancy_ui("discrepancy_1")
+        )
+        )
+      )
     )
   )
 }
