@@ -18,3 +18,5 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Language: en-US
+URL: https://github.com/chris-gaskell/Dissociations
+BugReports: https://github.com/chris-gaskell/Dissociations/issues
