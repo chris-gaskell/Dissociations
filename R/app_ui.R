@@ -7,21 +7,20 @@
 app_ui <- function(request) {
   tagList(
     golem_add_external_resources(),
-    fluidPage(
-      theme = bslib::bs_theme(
-        version = 5,
-        bootswatch = "flatly", #primary = "darkgreen"
-      ),
-      tags$head(
-        tags$style(
-          HTML(".horizontal-inputs .form-group { display: inline-block; margin-right: 10px; }")
-        )
+    mod_meta_social_ui("meta_social_1"),
+    navbarPage(
+      title = "Divergence",
+      theme = my_theme,
+
+      # Intro panel
+      tabPanel(
+        "About",
+        intro_ui("intro_ui")
       ),
 
-      h1("FirstGolem"),
-
-      fluidRow(
-      tabsetPanel(
+      # Tools menu
+      navbarMenu(
+        "Tools",
         tabPanel(
           "Deficits",
           mod_deficit_ui("deficit_1")
@@ -29,12 +28,20 @@ app_ui <- function(request) {
         tabPanel(
           "Discrepancies",
           mod_discrepancy_ui("discrepancy_1")
+        ),
+        tabPanel(
+          "Dissociations",
+          mod_dissociation_ui("dissociation_1")
         )
-        )
-      )
+      ),
+
+      # Info menu
+      info_ui("info")
     )
   )
 }
+
+
 
 #' Add external Resources to the Application
 #'
@@ -51,12 +58,15 @@ golem_add_external_resources <- function() {
   )
 
   tags$head(
+    tags$link(rel = "stylesheet", type = "text/scss", href = "www/styles.scss"),
+
+    tags$style(
+      HTML(".horizontal-inputs .form-group { display: inline-block; margin-right: 10px; }")
+    ),
     favicon(),
     bundle_resources(
       path = app_sys("app/www"),
-      app_title = "FirstGolem"
+      app_title = "Dissociations"
     )
-    # Add here other external resources
-    # for example, you can add shinyalert::useShinyalert()
   )
 }

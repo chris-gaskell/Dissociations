@@ -1,3 +1,3 @@
-# FirstGolem (development version)
+# Dissociations (development version)
 
 * Initial CRAN submission.

@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# FirstGolem
+# Dissociations
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -21,7 +21,7 @@ You can install the development version of FirstGolem like so:
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(FirstGolem)
+library(Dissociations)
 ## basic example code
 ```
 

@@ -20,7 +20,7 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "print-output", with_test = FALSE) # Name of the module
+golem::add_module(name = "meta_social", with_test = FALSE) # Name of the module
 golem::add_module(name = "another_module", with_test = TRUE) # Name of the module
 
 ## Add helper functions ----
@@ -40,7 +40,7 @@ golem::add_sass_file("custom")
 usethis::use_data_raw(name = "my_dataset", open = FALSE)
 
 #dependencies
-usethis::use_package("neuropsytools")
+usethis::use_package("metathis")
 
 ## Tests ----
 ## Add one line by test you want to create

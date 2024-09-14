@@ -1,0 +1,26 @@
+p::first-letter,
+ul li::first-letter {
+    text-transform: capitalize;
+}
+
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.green-text {
+    color: green;
+}
+
+.bold-red-text {
+    color: red;
+    font-weight: bold;
+}
+
+.italic-blue-text {
+    color: blue;
+    font-style: italic;
+}
